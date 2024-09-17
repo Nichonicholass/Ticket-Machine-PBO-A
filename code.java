@@ -35,6 +35,7 @@ class TicketMachine{
             System.out.println("Anda harus mengisi saldo : " + (price - balance));
         }
         else {
+            total += price;
             balance -= price;
             System.out.println("Tiket Berhasil dicetak!");
             System.out.println("Sisa uang disaldo :" + balance);
@@ -82,6 +83,7 @@ class TicketMachine{
 
                 case 4:
                     System.out.println("Terima kasih telah menggunakan Ticket Machine. Selamat menikmati perjalanan Anda!");
+                    System.out.println("Total pengeluaran Anda dalam transaksi ini : " + user.getTotal());
                     System.out.println("Sisa saldo Anda : " + user.getBalance());
                     userInput.close();
                     break;
